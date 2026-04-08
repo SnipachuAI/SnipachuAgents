@@ -1,330 +1,367 @@
-# Cactus
+<p align="center">
+  <img width="400" height="400" alt="snipachu-ai-cover" src="https://github.com/user-attachments/assets/02314c23-648e-4532-a004-79c0b6cb2e83" />
+</p>
 
-<img src="assets/banner.jpg" alt="Logo" style="border-radius: 30px; width: 100%;">
+<h1 align="center">Snipachu AI</h1>
 
-[![Docs][docs-shield]][docs-url]
-[![Website][website-shield]][website-url]
-[![GitHub][github-shield]][github-url]
-[![HuggingFace][hf-shield]][hf-url]
-[![Reddit][reddit-shield]][reddit-url]
-[![Blog][blog-shield]][blog-url]
+<div align="center">
+  <p><strong>AI-first on-chain analytics and research system for tokens, wallets, and project narratives</strong></p>
+  <p>
+    Token intelligence • Wallet profiling • Narrative compression • Multi-surface agent access • Credit-based usage
+  </p>
+</div>
 
-A low-latency AI engine for mobile devices & wearables. Main features:
+<div align="center">
 
-- **Fast:** fastest inference on ARM CPU
-- **Low RAM:** zero-copy memory mapping ensures 10x lower RAM use than other engines
-- **Multimodal:** one SDK for speech, vision, and language models
-- **Cloud fallback:** automatically route requests to cloud models if needed
-- **Energy-efficient:** NPU-accelerated prefill
+[![Web App](https://img.shields.io/badge/Web%20App-Open-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://your-web-app-link)
+[![Telegram Mini App](https://img.shields.io/badge/Telegram%20Mini%20App-Launch-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/your_mini_app)
+[![Docs](https://img.shields.io/badge/Docs-Read-8b5cf6?style=for-the-badge&logo=readthedocs&logoColor=white)](https://your-docs-link)
+[![X.com](https://img.shields.io/badge/X.com-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/your_account)
+[![Telegram Community](https://img.shields.io/badge/Telegram%20Community-Join-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/your_group_or_channel)
 
+</div>
+
+---
+
+> [!IMPORTANT]
+> Snipachu AI is built around a wallet-based account model, shared credits, and the same agent logic across Web App, Telegram Mini App, and browser extension
+
+> [!TIP]
+> The platform is designed to move from analysis to action without breaking context, while keeping users in control of their own wallet
+
+> [!NOTE]
+> Product surfaces may differ in UI depth, but they all run on the same analytics layer, agent logic, and account-level credit balance
+
+> [!CAUTION]
+> Snipachu AI is a decision-support system, not financial advice, and all swaps or wallet actions still require explicit user approval
+
+## System Definition
+
+Snipachu AI is an AI-first analytics system that accepts a token address, wallet address, or project query, runs on-chain analysis, market interpretation, and narrative research, then returns structured metrics with a plain-English summary of risk and opportunity
+
+Instead of acting like a chart-first terminal, the system is built to explain what matters before execution: liquidity quality, holder concentration, wallet behavior, exposure, and current project narrative
+
+> [!IMPORTANT]
+> The same intelligence layer powers three product surfaces: Web App for deep analysis, Telegram Mini App for compact checks, and browser extension for contextual inspection inside the browsing flow
+
+## Operational Flow
+
+The platform follows a single end-to-end path regardless of entry point
+
+```text
+Input
+  ├─ Token address
+  ├─ Wallet address
+  └─ Project / token name
+
+Ingestion
+  ├─ On-chain data collection
+  ├─ Market metric retrieval
+  └─ External narrative source gathering
+
+Processing
+  ├─ Token analytics pipeline
+  ├─ Wallet analytics pipeline
+  └─ Research compression pipeline
+
+Inference
+  ├─ Analytics Agent summary generation
+  └─ Research Agent narrative synthesis
+
+Delivery
+  ├─ Web App full output
+  ├─ Telegram compact output
+  └─ Extension quick context panel
+
+Action Layer
+  ├─ Watchlist / revisit
+  ├─ Portfolio review
+  └─ Swap flow entry with self-custody preserved
 ```
-┌─────────────────┐
-│  Cactus Engine  │ ←── OpenAI-compatible APIs for all major languages
-└─────────────────┘     Chat, vision, STT, RAG, tool call, cloud handoff
-         │
-┌─────────────────┐
-│  Cactus Graph   │ ←── Zero-copy computation graph (PyTorch for mobile)
-└─────────────────┘     Custom models, optimised for RAM & quantisation
-         │
-┌─────────────────┐
-│ Cactus Kernels  │ ←── ARM SIMD kernels (Apple, Snapdragon, Exynos, etc)
-└─────────────────┘     Custom attention, KV-cache quant, chunked prefill
+
+| Stage | Purpose | Output |
+|---|---|---|
+| Input | Receive token, wallet, or project query | Normalized request |
+| Ingestion | Pull chain, market, and narrative data | Raw analysis context |
+| Processing | Compute metrics, flags, and patterns | Structured analytics |
+| Inference | Convert signals into readable conclusions | AI summary |
+| Delivery | Fit response to each surface | Full, compact, or minimal UI |
+| Action | Let user continue toward decision or execution | Watch, rebalance, or swap |
+
+## Core Engines
+
+### Parsing
+
+The parsing layer normalizes identifiers and routes requests into the correct pipeline
+
+It determines whether the input is a token, wallet, or project query, validates the network context, applies detail level, and prepares the job for downstream analytics or research logic
+
+> [!TIP]
+> This layer is what keeps the same request shape usable across Web App, Telegram Mini App, browser extension, and external API clients
+
+### Processing
+
+The processing layer computes the actual system intelligence
+
+For tokens, it evaluates liquidity depth, volume behavior, volatility, holder concentration, and structural risk context
+
+For wallets, it profiles holdings, portfolio concentration, PnL direction, activity style, and behavioral risk
+
+For project queries, it groups narrative sources, removes duplicates, and extracts the events that materially changed the story around the asset
+
+### Inference
+
+The inference layer turns structured analytics into readable conclusions
+
+The Analytics Agent explains whether the token or wallet setup looks healthy, fragile, concentrated, overheated, or structurally risky
+
+The Research Agent condenses external information into a short digest so users do not need to manually scan news, posts, and fragmented project updates
+
+> [!NOTE]
+> The system is AI-first because interpretation is a core output, not a cosmetic add-on above raw numbers
+
+### Orchestration
+
+The orchestration layer manages how work is triggered, queued, returned, and reused across product surfaces
+
+It powers synchronous lightweight calls, asynchronous jobs, shared history, shared credits, and unified agent behavior no matter where the request begins
+
+| Engine | Primary role | Typical outputs |
+|---|---|---|
+| Parsing | Normalize and route input | Valid request object |
+| Processing | Compute metrics and flags | Liquidity, volatility, PnL, risk signals |
+| Inference | Explain what matters | Human-readable summaries |
+| Orchestration | Manage jobs and delivery | Shared results, usage tracking, surface-specific response shapes |
+
+## Control Surface
+
+Snipachu AI is designed as a controllable system rather than a black box product shell
+
+### Configs
+
+Configs define network selection, detail level, time window, surface behavior, and optional output depth for different use cases
+
+### Prompts
+
+Agent-facing prompt structure governs how summaries are written, how risks are prioritized, and how concise or detailed each response should be
+
+### Flags
+
+Flags expose system-level risk markers such as thin liquidity, whale concentration, overexposure, abnormal flow behavior, and insufficient credits
+
+### APIs
+
+The API layer exposes analytics, agent execution, job polling, and webhook management under account-level authentication
+
+### Modes
+
+The same system supports different interaction modes
+
+| Mode | Intended environment | Behavior |
+|---|---|---|
+| Short | Telegram and extension | Compressed metrics and short AI summary |
+| Full | Web App | Expanded metrics, logs, and detailed review |
+| Sync | Lightweight direct calls | Immediate response |
+| Async | Heavier jobs | Run → poll → fetch result |
+
+> [!WARNING]
+> Surface differences change presentation, not logic. A token check triggered in Telegram and the same token check triggered in the Web App still draw from the same core pipelines and shared account credits
+
+## Usage Tiers
+
+### Basic
+
+Basic usage is the entry layer for new users and lightweight checks
+
+It typically starts with wallet sign-in, the free 10-credit test drive, a first token check, a first wallet check, and an optional research call to understand the full analysis loop
+
+### Advanced
+
+Advanced usage is for traders or power users who want more control over how the system is used
+
+This includes recurring token and wallet analysis, deeper agent usage, API access, custom integrations, and broader use across Web App, Telegram, and browser extension
+
+### Production
+
+Production usage is for heavier operators, teams, and builders integrating Snipachu AI into internal dashboards, automation layers, or external products
+
+This mode adds stronger operational requirements around concurrency, job handling, webhook reliability, credits monitoring, and system observability
+
+| Tier | Best for | Core capability |
+|---|---|---|
+| Basic | New users and manual checks | Fast onboarding and simple agent runs |
+| Advanced | Active traders and power users | Higher-volume analysis and customization |
+| Production | Teams and integrations | API, jobs, webhooks, scale-aware usage |
+
+## Architecture Notes
+
+### Stack
+
+Snipachu AI combines wallet-based authentication, on-chain data ingestion, analytics pipelines, AI summarization, job orchestration, and account-level credits into one coordinated system
+
+### Key components
+
+| Component | Function |
+|---|---|
+| Wallet-based account | Identity, sign-in, shared credits, shared history |
+| Token analytics engine | Liquidity, volume, volatility, holder concentration, risk flags |
+| Wallet analytics engine | Portfolio structure, PnL, behavior, exposure profile |
+| Research engine | Narrative gathering, filtering, compression |
+| Analytics Agent | Metrics + readable token or wallet explanation |
+| Research Agent | Short-form narrative digest |
+| Jobs layer | Async processing and result retrieval |
+| Webhooks layer | Event delivery for jobs, credits, and plan changes |
+| Credits engine | Metered product usage via account balance |
+
+### Deployment model
+
+The system is multi-surface by design
+
+The Web App acts as the full control terminal
+
+The Telegram Mini App acts as the compact mobile interface
+
+The browser extension acts as a contextual inspection layer
+
+The API allows the same analytics and agent outputs to be consumed by external tools
+
+> [!IMPORTANT]
+> One wallet equals one account, one credits balance, and one intelligence layer across all surfaces
+
+## Reality Check
+
+Snipachu AI is designed to improve clarity, not eliminate uncertainty
+
+### Benchmarks
+
+The most useful internal benchmark for this system is not whether it produces the largest amount of data, but whether it reduces the number of tabs, interpretation steps, and blind spots before a decision is made
+
+A good result is faster recognition of thin liquidity, whale-heavy supply, poor wallet behavior, narrative shifts, or overconcentrated exposure before capital is committed
+
+### Known caveats
+
+| Caveat | Why it matters |
+|---|---|
+| AI summaries depend on input quality | Weak or incomplete upstream data reduces summary quality |
+| On-chain signals can change quickly | A healthy setup can deteriorate fast in volatile markets |
+| Narrative analysis is compressive | Digests reduce noise but also remove nuance |
+| Wallet profiling is probabilistic | Behavioral interpretation is useful, but not absolute |
+| Credits are finite | Heavy usage must be planned, monitored, or topped up |
+
+### Realistic expectations
+
+Users should expect decision support, risk surfacing, and compressed context
+
+Users should not expect guarantees of safety, profitability, or perfect predictive power
+
+> [!CAUTION]
+> A strong summary is not a trading signal by itself. The purpose of the system is to improve judgment, not replace it
+
+## Run / Deploy
+
+### Local run
+
+A local or lightweight setup is useful for testing basic analytics calls, validating auth, and checking response shapes before deeper integration
+
+```bash
+curl https://api.snipachu.ai/v1/analytics/token \
+  -H "Authorization: Bearer $SNIPACHU_API_KEY" \
+  -H "Content-Type: application/json" \
+  -H "Idempotency-Key: $(uuidgen)" \
+  -d '{
+    "network": "solana",
+    "address": "So11111111111111111111111111111111111111112",
+    "detail_level": "short"
+  }'
 ```
 
-## Quick Demo (Mac)
+Expected response shape
 
-- Step 1: `brew install cactus-compute/cactus/cactus`
-- Step 2: `cactus transcribe` or `cactus run` 
-
-## Cactus Engine
-
-```cpp
-#include "cactus.h"
-
-cactus_model_t model = cactus_init(
-    "path/to/weight/folder",
-    "path to txt or dir of txts for auto-rag",
-    false
-);
-
-const char* messages = R"([
-    {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "My name is Henry Ndubuaku"}
-])";
-
-const char* options = R"({
-    "max_tokens": 50,
-    "stop_sequences": ["<|im_end|>"]
-})";
-
-char response[4096];
-int result = cactus_complete(
-    model,            // model handle
-    messages,         // JSON chat messages
-    response,         // response buffer
-    sizeof(response), // buffer size
-    options,          // generation options
-    nullptr,          // tools JSON
-    nullptr,          // streaming callback
-    nullptr           // user data
-);
-```
-Example response from Gemma3-270m
 ```json
 {
-    "success": true,        // generation succeeded
-    "error": null,          // error details if failed
-    "cloud_handoff": false, // true if cloud model used
-    "response": "Hi there!",
-    "function_calls": [],   // parsed tool calls
-    "confidence": 0.8193,   // model confidence
-    "time_to_first_token_ms": 45.23,
-    "total_time_ms": 163.67,
-    "prefill_tps": 1621.89,
-    "decode_tps": 168.42,
-    "ram_usage_mb": 245.67,
-    "prefill_tokens": 28,
-    "decode_tokens": 50,
-    "total_tokens": 78
+  "token": {
+    "network": "solana",
+    "address": "So11111111111111111111111111111111111111112"
+  },
+  "metrics": {
+    "liquidity_usd": 152340.12,
+    "volume_24h_usd": 83942.77,
+    "volatility_24h": 0.19,
+    "top10_holders_pct": 63.5
+  },
+  "flags": {
+    "thin_liquidity": false,
+    "whale_concentration": true
+  },
+  "summary": "Liquidity is decent but supply is heavily concentrated in a few wallets. Size positions carefully.",
+  "credits_used": 1
 }
 ```
 
-## Cactus Graph
+### Production deployment
 
-```cpp
-#include "cactus.h"
+For higher-scale usage, the recommended model is account-level API auth, async jobs for heavier workloads, polling or webhook-driven result handling, and credits monitoring as part of the operational loop
 
-CactusGraph graph;
-auto a = graph.input({2, 3}, Precision::FP16);
-auto b = graph.input({3, 4}, Precision::INT8);
-
-auto x1 = graph.matmul(a, b, false);
-auto x2 = graph.transpose(x1);
-auto result = graph.matmul(b, x2, true);
-
-float a_data[6] = {1.1f, 2.3f, 3.4f, 4.2f, 5.7f, 6.8f};
-float b_data[12] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-
-graph.set_input(a, a_data, Precision::FP16);
-graph.set_input(b, b_data, Precision::INT8);
-
-graph.execute();
-void* output_data = graph.get_output(result);
-
-graph.hard_reset(); 
+```text
+Client / Product Surface
+        ↓
+API Auth Layer
+        ↓
+Run Agent Endpoint
+        ↓
+Jobs Queue / Processing
+        ↓
+Result Storage
+        ↓
+Webhook or Polling Retrieval
+        ↓
+Internal Product / External Integration
 ```
 
-## API & SDK References
+### High-level production checklist
 
-| Reference | Language | Description |
-|-----------|----------|-------------|
-| [Engine API](docs/cactus_engine.md) | C | Chat completion, streaming, tool calling, transcription, embeddings, RAG, vision, VAD, vector index, cloud handoff |
-| [Graph API](docs/cactus_graph.md) | C++ | Tensor operations, matrix multiplication, attention, normalization, activation functions |
-| [Python SDK](/python/) | Python | Mac, Linux |
-| [Swift SDK](/apple/) | Swift | iOS, macOS, tvOS, watchOS, Android |
-| [Kotlin SDK](/android/) | Kotlin | Android, iOS (via KMP) |
-| [Flutter SDK](/flutter/) | Dart | iOS, macOS, Android |
-| [Rust SDK](/rust/) | Rust | Mac, Linux |
-| [React Native](https://github.com/cactus-compute/cactus-react-native) | JavaScript | iOS, Android |
+| Area | What matters |
+|---|---|
+| Auth | Scoped API keys and safe secret handling |
+| Jobs | Queue visibility and retry-safe polling |
+| Webhooks | Signature verification and idempotent event handling |
+| Credits | Threshold alerts and usage monitoring |
+| Reliability | Logging, status codes, latency tracking |
+| Privacy | Minimal storage and no private key custody |
 
-> **Model weights:** Pre-converted weights for all supported models at [huggingface.co/Cactus-Compute](https://huggingface.co/Cactus-Compute).
+> [!TIP]
+> For lightweight interfaces, use synchronous calls when possible. For heavy or repeated workloads, move to the run-agent plus jobs flow and wire webhooks into your own system
 
-## Benchmarks (CPU-only, no GPU)
+## Trust Layer
 
-- All weights INT4 quantised
-- LFM: 1k-prefill / 100-decode, values are prefill tps / decode tps
-- LFM-VL: 256px input, values are latency / decode tps
-- Parakeet: 20s audio input, values are latency / decode tps
-- Missing latency = no NPU support yet
+> [!IMPORTANT]
+> Snipachu AI follows a non-custodial design. Wallet connection proves ownership, but signing stays inside the user wallet
 
-| Device | LFM 1.2B | LFMVL 1.6B | Parakeet 1.1B | RAM |
-|--------|----------|------------|---------------|-----|
-| Mac M4 Pro | 582/100 | 0.2s/98 | 0.1s/900k+ | 76MB |
-| iPad/Mac M3 | 350/60 | 0.3s/69 | 0.3s/800k+ | 70MB |
-| iPhone 17 Pro | 327/48 | 0.3s/48 | 0.3s/300k+ | 108MB |
-| iPhone 13 Mini | 148/34 | 0.3s/35 | 0.7s/90k+ | 1GB |
-| Galaxy S25 Ultra | 255/37 | -/34 | -/250k+ | 1.5GB |
-| Pixel 6a | 70/15 | -/15 | -/17k+ | 1GB |
-| Galaxy A17 5G | 32/10 | -/11 | -/40k+ | 727MB |
-| CMF Phone 2 Pro | - | - | - | - |
-| Raspberry Pi 5 | 69/11 | 13.3s/11 | 4.5s/180k+ | 869MB |
+> [!NOTE]
+> The platform stores account metadata, usage logs, job metadata, and optional recent results for history and support purposes
 
-## Supported Transcription Model
+> [!CAUTION]
+> The platform does not store seed phrases, private keys, custody balances, full Telegram chat history, or full browsing history from the extension
 
-- STT: 20s audio input on Macbook Air M3 chip
-- Benchmark dataset: internal evals with production users
+| Trust area | Model |
+|---|---|
+| Identity | Wallet-based account |
+| Signing | User wallet only |
+| Custody | None |
+| Billing | Credits purchased with $SNIPACHU |
+| Transparency | On-chain burn and treasury visibility |
+| Permissions | Explicit approvals for write actions |
 
-| Model | Params | End2End ms | Latency ms | Decode toks/sec | NPU | RTF | WER |
-|-------|--------|------------|------------|------------|-----|-----|-----|
-| UsefulSensors/moonshine-base | 61M | 361.35 | 182 | 262 | yes | 0.0180 | 0.1395 |
-| openai/whisper-tiny | 39M | 232.03 | 137.38 | 581 | yes | 0.0116 | 0.1860 |
-| openai/whisper-base | 74M | 329.37 | 178.65 | 358 | yes | 0.0164 | 0.1628 |
-| openai/whisper-small | 244M | 856.79 | 332.63 | 108 | yes | 0.0428 | 0.0930 |
-| openai/whisper-medium | 769M | 2085.87 | 923.33 | 49 | yes | 0.1041 | 0.0930 |
-| openai/whisper-large-v3 | 1.55B | 5994 | 2050 | 15.72 | no | 0.2992 | - |
-| nvidia/parakeet-ctc-0.6b | 600M | 201.77 | 201.44 | 5214285 | yes | 0.0101 | 0.0930 |
-| nvidia/parakeet-tdt-0.6b-v3 | 600M | 718.91 | 718.82 | 3583333 | yes | 0.0359 | 0.0465 |
-| nvidia/parakeet-ctc-1.1b | 1.1B | 279.03 | 278.92 | 4562500 | yes | 0.0139 | 0.1628 |
-| snakers4/silero-vad | - | - | - | - | - | - | - |
-| pyannote/segmentation-3.0 | - | - | - | - | - | - | - |
-| pyannote/wespeaker-voxceleb-resnet34-LM | - | - | - | - | - | - | - |
+## Closing Overview
 
-## Supported LLMs
+Snipachu AI is best understood as an analysis system with one consistent intelligence core and multiple operational surfaces
 
-- Gemma weights are often **gated** on HuggingFace, needs tokens 
-- Run `huggingface-cli login` and input your huggingface token
+It is built to reduce fragmentation between token data, wallet behavior, project narrative, and execution context, while keeping the user in control of custody, permissions, and final action
 
-| Model | Features |                                                      
-|-------|----------|
-| google/gemma-3-270m-it | completion |
-| google/functiongemma-270m-it | tools |
-| google/gemma-3-1b-it | completion, gated |
-| google/gemma-4-E2B-it | completion, tools, embed, vision, speech|
-| google/gemma-3n-E2B-it | completion, tools |
-| google/gemma-4-E4B-it | completion, tools, embed, vision, speech|
-| google/gemma-3n-E4B-it | completion, tools |
-| google/gemma-4-E2B-it | vision, audio, completion, tools, Apple NPU |
-| google/gemma-4-E4B-it | vision, audio, completion, tools, Apple NPU |
-| Qwen/Qwen3-0.6B | completion, tools, embed | 
-| Qwen/Qwen3-Embedding-0.6B | embed | 
-| Qwen/Qwen3.5-0.8B | vision, completion, tools, embed |
-| Qwen/Qwen3-1.7B | completion, tools, embed | 
-| Qwen/Qwen3.5-2B | vision, completion, tools, embed | 
-| LiquidAI/LFM2.5-350M | completion, tools, embed |
-| LiquidAI/LFM2-700M | completion, tools, embed |
-| LiquidAI/LFM2-8B-A1B | completion, tools, embed |
-| LiquidAI/LFM2.5-1.2B-Thinking | completion, tools, embed |
-| LiquidAI/LFM2.5-1.2B-Instruct | completion, tools, embed |
-| LiquidAI/LFM2-2.6B | completion, tools, embed |
-| LiquidAI/LFM2-VL-450M | vision, txt & img embed, Apple NPU |
-| LiquidAI/LFM2.5-VL-1.6B | vision, txt & img embed, Apple NPU |
-| tencent/Youtu-LLM-2B | completion, tools, embed |
-| nomic-ai/nomic-embed-text-v2-moe | embed |
+---
 
-## Roadmap
+## License
 
-| Date | Status | Milestone |
-|------|--------|-----------|
-| Sep 2025 | Done | Released v1 |
-| Oct 2025 | Done | Chunked prefill, KVCache Quant (2x prefill) |
-| Nov 2025 | Done | Cactus Attention (10 & 1k prefill = same decode) |
-| Dec 2025 | Done | Team grows to +6 Research Engineers |
-| Jan 2026 | Done | Apple NPU/RAM, 5-11x faster iOS/Mac |
-| Feb 2026 | Done | Hybrid inference, INT4, lossless Quant (1.5x) |
-| Mar 2026 | Coming | Qualcomm/Google NPUs, 5-11x faster Android |
-| Apr 2026 | Coming | Mediatek/Exynos NPUs, Cactus@ICLR |
-| May 2026 | Coming | Kernel→C++, Graph/Engine→Rust, Mac GPU & VR |
-| Jun 2026 | Coming | Torch/JAX model transpilers |
-| Jul 2026 | Coming | Wearables optimisations, Cactus@ICML |
-| Aug 2026 | Coming | Orchestration |
-| Sep 2026 | Coming | Full Cactus paper, chip manufacturer partners |
+This repository can be adapted to your preferred license model
 
-## Using this repo
-
-```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                                                                              │
-│ Step 0: if on Linux (Ubuntu/Debian)                                          │
-│ sudo apt-get install python3 python3-venv python3-pip cmake                  │
-│   build-essential libcurl4-openssl-dev                                       │
-│                                                                              │
-│ Step 1: clone and setup                                                      │
-│ git clone https://github.com/cactus-compute/cactus && cd cactus              │
-│ source ./setup                                                               │
-│                                                                              │
-│ Step 2: use the commands                                                     │
-│──────────────────────────────────────────────────────────────────────────────│
-│                                                                              │
-│  cactus auth                         manage Cloud API key                    │
-│    --status                          show key status                         │
-│    --clear                           remove saved key                        │
-│                                                                              │
-│  cactus run <model>                  opens playground (auto downloads)       │
-│    --precision INT4|INT8|FP16        quantization (default: INT4)            │
-│    --token <token>                   HF token (gated models)                 │
-│    --reconvert                       force reconversion from source          │
-│                                                                              │
-│  cactus transcribe [model]           live mic transcription (parakeet-1.1b)  │
-│    --file <audio.wav>                transcribe file instead of mic          │
-│    --precision INT4|INT8|FP16        quantization (default: INT4)            │
-│    --token <token>                   HF token (gated models)                 │
-│    --reconvert                       force reconversion from source          │
-│                                                                              │
-│  cactus download <model>             downloads model to ./weights            │
-│    --precision INT4|INT8|FP16        quantization (default: INT4)            │
-│    --token <token>                   HuggingFace API token                   │
-│    --reconvert                       force reconversion from source          │
-│                                                                              │
-│  cactus convert <model> [dir]        convert model, supports LoRA merge      │
-│    --precision INT4|INT8|FP16        quantization (default: INT4)            │
-│    --lora <path>                     LoRA adapter to merge                   │
-│    --token <token>                   HuggingFace API token                   │
-│                                                                              │
-│  cactus build                        build for ARM → build/libcactus.a       │
-│    --apple                           Apple (iOS/macOS)                       │
-│    --android                         Android                                 │
-│    --flutter                         Flutter (all platforms)                 │
-│    --python                          shared lib for Python FFI               │
-│                                                                              │
-│  cactus test                         run unit tests and benchmarks           │
-│    --model <model>                   default: LFM2-VL-450M                   │
-│    --transcribe_model <model>        default: moonshine-base                 │
-│    --benchmark                       use larger models                       │
-│    --precision INT4|INT8|FP16        regenerate weights with precision       │
-│    --reconvert                       force reconversion from source          │
-│    --no-rebuild                      skip building library                   │
-│    --llm / --stt / --performance     run specific test suite                 │
-│    --ios                             run on connected iPhone                 │
-│    --android                         run on connected Android                │
-│                                                                              │
-│  cactus clean                        remove all build artifacts              │
-│  cactus --help                       show all commands and flags             │
-│                                                                              │
-└──────────────────────────────────────────────────────────────────────────────┘
-```
-
-## Maintaining Organisations
-
-1. [Cactus Compute, Inc. (YC S25)](https://cactuscompute.com/)
-2. [UCLA's BruinAI](https://bruinai.org/)
-3. [Char (YC S25)](https://char.com/)
-4. [Yale's AI Society](https://www.yale-ai.org/team)
-5. [National University of Singapore's AI Society](https://www.nusaisociety.org/)
-6. [UC Irvine's AI@UCI](https://aiclub.ics.uci.edu/)
-7. [Imperial College's AI Society](https://www.imperialcollegeunion.org/csp/1391)
-8. [University of Pennsylvania's AI@Penn](https://ai-at-penn-main-105.vercel.app/)
-9. [University of Michigan Ann-Arbor MSAIL](https://msail.github.io/)
-10. [University of Colorado Boulder's AI Club](https://www.cuaiclub.org/)
-
-## Citation 
-
-If you use Cactus in your research, please cite it as follows:
-
-```bibtex
-@software{cactus,
-  title        = {Cactus: AI Inference Engine for Phones & Wearables},
-  author       = {Ndubuaku, Henry and Cactus Team},
-  url          = {https://github.com/cactus-compute/cactus},
-  year         = {2025}
-}
-```
-
-**N/B:** Scroll all the way up and click the shields link for resources!
-
-[docs-shield]: https://img.shields.io/badge/Docs-555?style=for-the-badge&logo=readthedocs&logoColor=white
-[docs-url]: https://cactus-compute.github.io/cactus/
-
-[website-shield]: https://img.shields.io/badge/Website-555?style=for-the-badge&logo=safari&logoColor=white
-[website-url]: https://cactuscompute.com/
-
-[github-shield]: https://img.shields.io/badge/GitHub-555?style=for-the-badge&logo=github&logoColor=white
-[github-url]: https://github.com/cactus-compute/cactus
-
-[hf-shield]: https://img.shields.io/badge/HuggingFace-555?style=for-the-badge&logo=huggingface&logoColor=white
-[hf-url]: https://huggingface.co/Cactus-Compute
-
-[reddit-shield]: https://img.shields.io/badge/Reddit-555?style=for-the-badge&logo=reddit&logoColor=white
-[reddit-url]: https://www.reddit.com/r/cactuscompute/
-
-[blog-shield]: https://img.shields.io/badge/Blog-555?style=for-the-badge&logo=hashnode&logoColor=white
-[blog-url]: https://cactuscompute.com/blog
+For public release, replace this section with your actual license, legal notice, and official platform links
