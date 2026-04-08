@@ -1,0 +1,18 @@
+{
+  "experimentId": "exp-001",
+  "createdAt": "2025-09-25T12:00:00Z",
+  "description": "Volatility threshold analysis for selected token over rolling window",
+  "parameters": {
+    "tokenSymbol": "SOL",
+    "analysisWindowMinutes": 60,
+    "volatilityThreshold": 5.0
+  },
+  "status": "in-progress",
+  "results": {
+    "detectedSpikes": 3,
+    "averageVolatility": 4.8,
+    "maxDrawdown": -12.5,
+    "alertsTriggered": true
+  },
+  "notes": "Experiment is running on 1-hour windows, monitoring for abnormal volatility. Threshold set at 5%."
+}
